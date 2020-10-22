@@ -3,7 +3,7 @@ import { View } from 'react-native';
 
 // import { Container } from './styles';
 
-const OrphanageData: React.FC = () => {
+const OrphanageData = () => {
   return <View />;
 }
 
