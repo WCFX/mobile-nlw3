@@ -1,8 +1,9 @@
 import React from 'react';
 import { View, Text, ScrollView, Image } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
-import styles from '../OrphanagesMap/styles';
 
+import styles from './styles';
+import mapMarkerImg from '../../images/map-marker.png';
 
 const OrphanageDetails = () => {
   return (
