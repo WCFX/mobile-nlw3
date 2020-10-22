@@ -58,6 +58,6 @@ const OrphanageData = () => {
       </RectButton>
     </ScrollView>
   )
-}
+};
 
 export default OrphanageData;
