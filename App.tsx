@@ -1,41 +1,24 @@
 import React from 'react';
-import { Dimensions, StyleSheet, Text, View } from 'react-native';
-import MapView, { Marker,PROVIDER_GOOGLE } from 'react-native-maps';
+import { useFonts } from 'expo-font';
+import { Nunito_600SemiBold, Nunito_700Bold, Nunito_800ExtraBold } from '@expo-google-fonts/nunito';
 
-
-import mapMarker from './src/images/map-marker.png';
+import Routes from './src/routes';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <MapView
-        provider={PROVIDER_GOOGLE}
-        style={styles.map}
-        initialRegion={{
-          latitude: -27.2092052,
-          longitude: -49.6401092,
-          latitudeDelta: 0.008,
-          longitudeDelta: 0.008,
-        }}
-      >
-        <Marker
-          icon={mapMarker}
-          coordinate={{
-            latitude: -27.2092052,
-            longitude: -49.6401092,
-          }}
-        />
-      </MapView>
-    </View>
-  );
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  map: {
-    width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height,
+  const [fontsLoaded] = useFonts({
+    N600SM: Nunito_600SemiBold,
+    N700B: Nunito_700Bold,
+    N800EB: Nunito_800ExtraBold,
+  });
+
+  if(!fontsLoaded){
+    return null;
   }
-});
+
+  return (
+    <>
+      <Routes />
+    </>
+  )
+};
