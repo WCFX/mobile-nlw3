@@ -88,6 +88,12 @@ const styles = StyleSheet.create({
     borderColor: '#A1E9C5',
     borderRadius: 20,
   },
+  scheduleItemRed: {
+    backgroundColor: '#FEF6F9',
+    borderWidth: 1,
+    borderColor: '#FFBCD4',
+    borderRadius: 20,
+  },
 
   scheduleText: {
     fontFamily: 'N600SB',
@@ -102,6 +108,9 @@ const styles = StyleSheet.create({
 
   scheduleTextGreen: {
     color: '#37C77F'
+  },
+  scheduleTextRed: {
+    color: '#ff669d'
   },
 
   contactButton: {
